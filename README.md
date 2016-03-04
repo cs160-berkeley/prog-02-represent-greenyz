@@ -15,7 +15,7 @@ See [Represent Walkthrough] (https://youtu.be/LRSRP9TbTls)
 <img src="screenshots/pic1.png" height="400" alt="Screenshot"/>
 <img src="screenshots/pic2.png" height="400" alt="Screenshot"/>
 <img src="screenshots/pic3.png" height="400" alt="Screenshot"/>
-<img src="screenshots/pic4.png" height="400" alt="Screenshot"/>
-<img src="screenshots/pic5.png" height="400" alt="Screenshot"/>
+<img src="screenshots/pic4.png" height="200" alt="Screenshot"/>
+<img src="screenshots/pic5.png" height="200" alt="Screenshot"/>
 
 ## Acknowledgments
