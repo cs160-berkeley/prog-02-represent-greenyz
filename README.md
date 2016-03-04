@@ -1,20 +1,21 @@
 # PROG 02: Represent!
 
-Briefly describe your app here.
+Represent is an Android app that allows users to view information on Congressional representatives in different areas.  The app uses a combination of a mobile device and smartwatch to provide the user with a variety of options. On the mobile device, the user can enter their zip code or use their current location to view the representatives for the given area. A display of the representatives then show up on both the watch and mobile device, and the user can click on a representative (on either the mobile device or smartwatch) to view more details of the representative.  On the watch, the user can further view details of the 2012 presidential election for the given area after swiping through all representatives.  The user can also skae the watch to randomize the location and representatives.
 
 ## Authors
 
-FirstName LastName ([your_email@berkeley.edu](mailto:your_email@berkeley.edu))
+Zachary Green ([zach.green@berkeley.edu](mailto:zach.green@berkeley.edu))
 
 ## Demo Video
 
-See [your demo video title here] (https://link_to_your_video)
+See [Represent Walkthrough] (https://youtu.be/LRSRP9TbTls)
 
 ## Screenshots
 
-<img src="screenshots/main.png" height="400" alt="Screenshot"/>
+<img src="screenshots/pic1.png" height="400" alt="Screenshot"/>
+<img src="screenshots/pic2.png" height="400" alt="Screenshot"/>
+<img src="screenshots/pic3.png" height="400" alt="Screenshot"/>
+<img src="screenshots/pic4.png" height="400" alt="Screenshot"/>
+<img src="screenshots/pic5.png" height="400" alt="Screenshot"/>
 
 ## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Any other support
