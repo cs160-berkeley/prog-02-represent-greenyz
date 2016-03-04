@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<android.support.wearable.view.BoxInsetLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" android:id="@+id/container"-->
+    <!--tools:deviceIds="wear">-->
+
+    <!--<android.support.wearable.view.CardScrollView-->
+        <!--android:id="@+id/card_scroll_view"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_width="match_parent"-->
+        <!--app:layout_box="bottom">-->
+
+        <android.support.wearable.view.CardFrame
+
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_height="150dp"
+            app:layout_box ="bottom"
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_horizontal|bottom">
+            <LinearLayout
+                android:id="@+id/rep_container"
+                android:clickable="true"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp">
+                <ImageView
+                    android:id="@+id/rep_pic"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/bboxer" />
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp">
+                    <TextView
+                        android:id="@+id/rep_name"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/black"
+                        android:text="Sen. Barbara Boxer"/>
+                        android:textSize="24sp"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/rep_party"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/black"
+                        android:text="Democrat"/>
+                        android:textSize="18sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.wearable.view.CardFrame>
+    <!--</android.support.wearable.view.CardScrollView>-->
+
+    <!--<TextView android:id="@+id/text" app:layout_box="all" android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" android:text="@string/hello_world" />-->
+
+    <!--<TextView android:id="@+id/clock" app:layout_box="all" android:layout_gravity="bottom|start"-->
+    <!--android:layout_width="wrap_content" android:layout_height="wrap_content"-->
+    <!--android:textColor="@android:color/white" />-->
+
+<!--</android.support.wearable.view.BoxInsetLayout>-->
