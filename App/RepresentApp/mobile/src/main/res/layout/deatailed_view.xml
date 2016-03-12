@@ -3,67 +3,129 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:id="@+id/icon"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/bboxer" />
+    <ScrollView android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:visibility="invisible">
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/Name"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:textSize="20sp"
-                android:paddingTop="5dp"/>
-            <TextView
-                android:id="@+id/Party"
+                android:layout_margin="5dp"
+                android:background="@android:color/white">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/rep_img"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/bboxer" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/Name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:textSize="24sp"
+                            android:paddingTop="5dp"
+                            android:textColor="#000000"/>
+                        <TextView
+                            android:id="@+id/Party"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:textSize="18sp"
+                            android:paddingTop="5dp"
+                            android:textColor="#000000"/>
+                        <TextView
+                            android:id="@+id/EndDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:textSize="18sp"
+                            android:paddingTop="5dp"
+                            android:textColor="#000000"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:textSize="15sp"
-                android:paddingTop="5dp"/>
-            <TextView
-                android:id="@+id/EndDate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:textSize="15sp"
-                android:paddingTop="5dp"/>
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/CommitteesLayout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@android:color/white"
+                    android:padding="5dp" >
+                    <TextView
+                        android:id="@+id/CommitteesTitle"
+                        android:text="Committees"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="18sp"
+                        android:paddingBottom="5dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:textColor="#000000"/>
+                    <TextView
+                        android:id="@+id/Committees"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="15sp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/BillsLayout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    android:textColor="#000000">
+                    <TextView
+                        android:id="@+id/BillsTitle"
+                        android:text="Bills Sponsored"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="18sp"
+                        android:paddingBottom="5dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:textColor="#000000"/>
+                    <TextView
+                        android:id="@+id/Bills"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="15sp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/Committees"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:textSize="15sp"
-            android:layout_marginLeft="5dp"
-            android:paddingTop="5dp"/>
-        <TextView
-            android:id="@+id/Bills"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:textSize="15sp"
-            android:layout_marginLeft="5dp"
-            android:paddingTop="5dp"/>
-
-    </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

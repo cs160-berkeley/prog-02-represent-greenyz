@@ -2,6 +2,7 @@ package com.example.zachgreen.representapp;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,28 +17,21 @@ public class ElectionCardFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.election_view, container, false);
-        TextView t = (TextView)v.findViewById(R.id.county);
-        Bundle args = getArguments();
-        if (args != null) {
-            String zip_code = args.getString("ZIP_CODE");
-            switch(zip_code){
-                case "91301":
-                    t.setText("LA County");
-                    break;
-                case "94704":
-                    t.setText("Alameda County");
-                    break;
-                case "11101":
-                    t.setText("Queens County");
-                    break;
-                case "33131":
-                    t.setText("Miami-Dade County");
-                    break;
-                default:
-                    t.setText("Default County");
-                    break;
-            }
+        try {
+            Bundle args = getArguments();
+
+            TextView county_t = (TextView) v.findViewById(R.id.county);
+            county_t.setText(args.getString("county"));
+
+            TextView obama_t = (TextView) v.findViewById(R.id.obama_num);
+            obama_t.setText(args.getDouble("obama_percentage") + "%");
+
+            TextView romney_t = (TextView) v.findViewById(R.id.romney_num);
+            romney_t.setText(args.getDouble("romney_percentage") + "%");
+        } catch (Exception e){
+            Log.d("T", e.toString());
         }
+
         return v;
     }
 

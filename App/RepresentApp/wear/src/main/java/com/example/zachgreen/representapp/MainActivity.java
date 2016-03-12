@@ -9,9 +9,12 @@ import android.support.wearable.activity.WearableActivity;
 import android.support.wearable.view.GridViewPager;
 import android.util.Log;
 
+import org.json.JSONObject;
+
 import java.util.Random;
 
 public class MainActivity extends WearableActivity {
+
     private SensorManager mSensorManager;
     private ShakeEventListener mSensorListener;
     private GridViewPager pager;
@@ -27,14 +30,7 @@ public class MainActivity extends WearableActivity {
         Bundle extras = getIntent().getExtras();
         adapter = new RepresentativeGridPagerAdapter(this, getFragmentManager(), extras);
         pager.setAdapter(adapter);
-//        String zipCode = "94704";
-//        try {
-//            Intent intent = getIntent();
-//            Bundle extras = intent.getExtras();
-//            zipCode = extras.getString("ZIP_CODE");
-//        } catch (Exception e){
-//        }
-//        updateVoteFragment(zipCode);
+
 
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         mSensorListener = new ShakeEventListener();
@@ -43,13 +39,25 @@ public class MainActivity extends WearableActivity {
 
             public void onShake() {
                 Log.d("T", "shake recognized");
-                String zip = RANDOM_ZIPS[rm.nextInt(RANDOM_ZIPS.length)];
+                double rand_val1 = new Random().nextDouble();
+                int lat_low = 30, lat_high = 47;
+                double rand_lat = lat_low + rand_val1 * (lat_high - lat_low);
+                double rand_val2 = new Random().nextDouble();
+                int long_low = -120, long_high = -75;
+                double rand_long = long_low + rand_val2 * (long_high - long_low);
+
                 Intent sendIntent = new Intent(getBaseContext(), WatchToPhoneServiceShake.class);
-                sendIntent.putExtra("ZIP_CODE", zip);
+                JSONObject jObj = new JSONObject();
+                try {
+                    jObj.put("loc", true);
+                    jObj.put("longitude", rand_long);
+                    jObj.put("latitude", rand_lat);
+                    sendIntent.putExtra("location", jObj.toString());
+                } catch (Exception e){
+
+                }
+
                 startService(sendIntent);
-                Intent activityIntent = new Intent(getBaseContext(), MainActivity.class);
-                activityIntent.putExtra("ZIP_CODE", zip);
-                startActivity(activityIntent);
             }
 
 

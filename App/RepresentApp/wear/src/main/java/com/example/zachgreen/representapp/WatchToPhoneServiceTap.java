@@ -22,6 +22,7 @@ public class WatchToPhoneServiceTap extends Service implements GoogleApiClient.C
 
     private GoogleApiClient mWatchApiClient;
     private List<Node> nodes = new ArrayList<>();
+    private Bundle data;
 
     @Override
     public void onCreate() {
@@ -39,6 +40,14 @@ public class WatchToPhoneServiceTap extends Service implements GoogleApiClient.C
     public void onDestroy() {
         super.onDestroy();
         mWatchApiClient.disconnect();
+    }
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        // Which cat do we want to feed? Grab this info from INTENT
+        // which was passed over when we called startService
+        data = intent.getExtras();
+        return START_STICKY;
     }
 
 
@@ -59,7 +68,8 @@ public class WatchToPhoneServiceTap extends Service implements GoogleApiClient.C
                         Log.d("T", "found nodes");
                         //when we find a connected node, we populate the list declared above
                         //finally, we can send a message
-                        sendMessage("/detailed", "Sen. Barbara Boxer");
+                        String rep_id = data.getString("id");
+                        sendMessage("/detailed", rep_id);
                         Log.d("T", "sent");
                         _this.stopSelf();
                     }

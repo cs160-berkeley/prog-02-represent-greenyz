@@ -28,14 +28,14 @@
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
                 android:paddingLeft="5dp">
-                <ImageView
-                    android:id="@+id/rep_pic"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="5dp"
-                    android:src="@drawable/bboxer" />
+                <!--<ImageView-->
+                    <!--android:id="@+id/rep_pic"-->
+                    <!--android:layout_width="50dp"-->
+                    <!--android:layout_height="60dp"-->
+                    <!--android:layout_marginBottom="5dp"-->
+                    <!--android:layout_marginRight="5dp"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:src="@drawable/bboxer" />-->
                 <LinearLayout
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
@@ -48,17 +48,19 @@
                         android:layout_height="wrap_content"
                         android:layout_width="match_parent"
                         android:textColor="@color/black"
-                        android:text="Sen. Barbara Boxer"/>
-                        android:textSize="24sp"/>
+                        android:gravity="center"
+                        android:text="Sen. Barbara Boxer"
+                        android:textSize="16sp"/>
                     <TextView
                         android:layout_marginTop="10dp"
                         android:id="@+id/rep_party"
                         android:fontFamily="sans-serif-light"
                         android:layout_height="wrap_content"
                         android:layout_width="match_parent"
+                        android:gravity="center"
                         android:textColor="@color/black"
-                        android:text="Democrat"/>
-                        android:textSize="18sp"/>
+                        android:text="Democrat"
+                        android:textSize="12sp"/>
                 </LinearLayout>
 
             </LinearLayout>

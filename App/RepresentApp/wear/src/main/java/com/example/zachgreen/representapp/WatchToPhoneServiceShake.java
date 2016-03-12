@@ -69,8 +69,8 @@ public class WatchToPhoneServiceShake extends Service implements GoogleApiClient
                         Log.d("T", "found nodes");
                         //when we find a connected node, we populate the list declared above
                         //finally, we can send a message
-                        String zip = data.getString("ZIP_CODE");
-                        sendMessage("/shake", zip);
+                        String jObj = data.getString("location");
+                        sendMessage("/shake", jObj);
                         Log.d("T", "sent");
                         _this.stopSelf();
                     }

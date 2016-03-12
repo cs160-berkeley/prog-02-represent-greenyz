@@ -49,7 +49,7 @@ public class PhoneToWatchService extends Service {
         // which was passed over when we called startService
 
         Bundle extras = intent.getExtras();
-        final String zipCode = extras.getString("ZIP_CODE");
+        final String rep_data = extras.getString("data");
 
         // Send the message with the cat name
         new Thread(new Runnable() {
@@ -58,7 +58,7 @@ public class PhoneToWatchService extends Service {
                 //first, connect to the apiclient
                 mApiClient.connect();
                 //now that you're connected, send a massage with the cat name
-                sendMessage("/" + "NEW_ZIP", zipCode);
+                sendMessage("/" + "NEW_LOC", rep_data);
             }
         }).start();
 
